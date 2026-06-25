@@ -1,23 +1,25 @@
 ENTRY(_start)
+
 OUTPUT_FORMAT("binary")
 
 SECTIONS
 {
-	. = 0X010000;
-	.text : ALIGN(4096){
-		./build/kernel.asm.o(.text)
-		*(.text)
-}
-	.rodata : ALIGN(4096){
-		*(.rodata)
-}
+    . = 0x10000; 
 
-	.data : ALIGN(4096){
-		*(.data)
-}
+    .text : {
+ 
+        *(.text)
+    }
 
-	.bss : ALIGN(4096){
-		*(.bss)
-		*(COMMON)
-}
+    .rodata : {
+        *(.rodata)
+    }
+
+    .data : {
+        *(.data)
+    }
+
+    .bss : {
+        *(.bss)
+    }
 }
