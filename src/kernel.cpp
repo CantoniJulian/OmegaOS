@@ -21,10 +21,9 @@ int k_print(unsigned short* vgabuffer, char* word) // paso puntero a memoria de 
 	return 0;
 }
 
-
 void k_main()
 {
 
-	k_print((unsigned short*)0xB8140, "Hola\npetes\0");	
+	k_print((unsigned short*)0xB8140, "Hola\npetes\0");// c++ no me va  a permitir mandarle la dirección hardcodeada sin especificar el tipo porque lo interpreta int y no como puntero.
 }
 
