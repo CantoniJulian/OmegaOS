@@ -4,7 +4,7 @@ FILES = ./build/kernel.asm.o ./build/kernel.o
 all:
 	nasm -f bin ./src/btldr.asm -o ./bin/btldr.bin
 	nasm -f elf -g  ./src/kernel.asm -o ./build/kernel.asm.o
-	i686-elf-gcc -I./src $(FLAGS) -std=gnu99 -c ./src/kernel.c -o ./build/kernel.o
+	i686-elf-gcc -I./src $(FLAGS) -std=gnu99 -c ./src/kernel.cpp -o ./build/kernel.o
 	
 	i686-elf-gcc $(FLAGS) -T ./src/linker.ld -o ./bin/kernel.bin $(FILES)
 

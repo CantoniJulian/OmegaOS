@@ -25,6 +25,6 @@ int k_print(unsigned short* vgabuffer, char* word) // paso puntero a memoria de 
 void k_main()
 {
 
-	k_print((unsigned short*)0xB8140, "Hola\nputis\0");	
+	k_print((unsigned short*)0xB8140, "Hola\npetes\0");	
 }
 
